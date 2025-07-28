@@ -5,6 +5,10 @@
     --text-color: #fff;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 p,
 h1,
 h2,
