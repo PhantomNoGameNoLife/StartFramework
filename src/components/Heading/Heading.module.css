@@ -1,0 +1,21 @@
+.icon::after,
+.icon::before {
+    content: '';
+    background-color: var(--text-color);
+    height: 4px;
+    width: 80px;
+}
+
+.icon::before {
+    left: auto;
+    right: 66px;
+}
+
+.color {
+    color: var(--second-color);
+}
+
+.color::after,
+.color::before {
+    background-color: var(--second-color);
+}

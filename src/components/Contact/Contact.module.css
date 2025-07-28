@@ -1,0 +1,26 @@
+label {
+    color: var(--main-color);
+    margin-bottom: 7px;
+    transition: .6s top;
+    position: relative;
+    top: 40px;
+    z-index: -1;
+}
+
+.top {
+    top: 0;
+}
+
+.bg {
+    background-color: var(--main-color);
+    transition: scale 0.3s ease-in-out;
+    -webkit-transition: scale 0.3s ease-in-out;
+    -moz-transition: scale 0.3s ease-in-out;
+    -ms-transition: scale 0.3s ease-in-out;
+    -o-transition: scale 0.3s ease-in-out;
+}
+
+.bg:hover {
+    background-color: var(--main-color);
+    scale: 1.05;
+}

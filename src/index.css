@@ -1,0 +1,71 @@
+:root {
+    --main-color: #1abc9c;
+    --second-color: #2c3e50;
+    --third-color: #1a252f;
+    --text-color: #fff;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-color);
+}
+
+.main-color {
+    background-color: var(--main-color);
+}
+
+.navbar {
+    background-color: var(--second-color);
+    transition: .6s padding ease-in-out;
+    -webkit-transition: .6s padding ease-in-out;
+    -moz-transition: .6s padding ease-in-out;
+    -ms-transition: .6s padding ease-in-out;
+    -o-transition: .6s padding ease-in-out;
+}
+
+.nav-link.active {
+    background-color: var(--main-color);
+}
+
+.dvh-100 {
+    margin-top: 6rem;
+    min-height: calc(100dvh - 6rem);
+}
+
+footer {
+    background-color: var(--second-color)
+}
+
+footer .list-unstyled li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    background-color: var(--text-color);
+    color: var(--main-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+footer .list-unstyled li a:hover {
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
+.copyright {
+    background-color: var(--third-color);
+}
