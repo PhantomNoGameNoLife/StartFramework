@@ -10,6 +10,7 @@ import rct from "./../../assets/6.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
+const imgs = [html, css, js, btsp, tw, rct];
 
 const Portfolio = () => {
   const [imgName, setImgName] = useState(null);
@@ -24,42 +25,16 @@ const Portfolio = () => {
             <div className='text-white'>
               <Heading head='PORTFOLIO COMPONENT' secColor={true} />
               <div className="portfolio row g-5">
-                <div className={`card-item col-md-4 ${Style.divImg}`} onClick={() => setImgName(html)} data-bs-toggle="modal" data-bs-target="#modal">
-                  <img className={`w-100 ${Style.ratio}`} src={html} alt="html" />
-                  <div className={`${Style.layer}`}>
-                    <FontAwesomeIcon icon={faPlus} className='fa-5x' />
-                  </div>
-                </div>
-                <div className={`card-item col-md-4 ${Style.divImg}`} onClick={() => setImgName(css)} data-bs-toggle="modal" data-bs-target="#modal">
-                  <img className={`w-100 ${Style.ratio}`} src={css} alt="css" />
-                  <div className={`${Style.layer}`}>
-                    <FontAwesomeIcon icon={faPlus} className='fa-5x' />
-                  </div>
-                </div>
-                <div className={`card-item col-md-4 ${Style.divImg}`} onClick={() => setImgName(js)} data-bs-toggle="modal" data-bs-target="#modal">
-                  <img className={`w-100 ${Style.ratio}`} src={js} alt="javascript" />
-                  <div className={`${Style.layer}`}>
-                    <FontAwesomeIcon icon={faPlus} className='fa-5x' />
-                  </div>
-                </div>
-                <div className={`card-item col-md-4 ${Style.divImg}`} onClick={() => setImgName(btsp)} data-bs-toggle="modal" data-bs-target="#modal">
-                  <img className={`w-100 ${Style.ratio}`} src={btsp} alt="bootstrap" />
-                  <div className={`${Style.layer}`}>
-                    <FontAwesomeIcon icon={faPlus} className='fa-5x' />
-                  </div>
-                </div>
-                <div className={`card-item col-md-4 ${Style.divImg}`} onClick={() => setImgName(tw)} data-bs-toggle="modal" data-bs-target="#modal">
-                  <img className={`w-100 ${Style.ratio}`} src={tw} alt="tailwindCss" />
-                  <div className={`${Style.layer}`}>
-                    <FontAwesomeIcon icon={faPlus} className='fa-5x' />
-                  </div>
-                </div>
-                <div className={`card-item col-md-4 ${Style.divImg}`} onClick={() => setImgName(rct)} data-bs-toggle="modal" data-bs-target="#modal">
-                  <img className={`w-100 ${Style.ratio}`} src={rct} alt="react" />
-                  <div className={`${Style.layer}`}>
-                    <FontAwesomeIcon icon={faPlus} className='fa-5x' />
-                  </div>
-                </div>
+                {imgs.map((name, idx) => {
+                  return (
+                    <div key={idx} className={`card-item col-md-4 ${Style.divImg}`} onClick={() => setImgName(name)} data-bs-toggle="modal" data-bs-target="#modal">
+                      <img className={`w-100 ${Style.ratio}`} src={name} alt='portfolioImg' />
+                      <div className={`${Style.layer}`}>
+                        <FontAwesomeIcon icon={faPlus} className='fa-5x' />
+                      </div>
+                    </div>
+                  )
+                })}
               </div>
             </div>
           </div>
@@ -72,7 +47,7 @@ const Portfolio = () => {
               <button type="button" className="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div className="modal-body">
-              <img id='imgModel' className='w-100' src={imgName} alt="html" />
+              <img id='imgModel' className='w-100' src={imgName} alt="modelImg" />
             </div>
           </div>
         </div>
